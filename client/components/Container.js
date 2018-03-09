@@ -1,24 +1,24 @@
 import React from 'react';
 import {render} from 'react-dom';
-import GoogleApiComponent from './GoogleApiComponent';
+import {GoogleApiWrapper} from 'google-maps-react';
 import Map from './Map';
 
 class Container extends React.Component{
 
   render(){
-    const style = {
-      width: '100vw',
-      height: '100vh'
-    };
+    // const style = {
+    //   width: '100vw',
+    //   height: '100vh'
+    // };
 
     return (
-      <div style={style} >
+      <div>
         <Map google={this.props.google}/>
       </div>
     );
   }
 }
 
-export default GoogleApiComponent({
+export default GoogleApiWrapper({
   apiKey: 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo'
 })(Container);

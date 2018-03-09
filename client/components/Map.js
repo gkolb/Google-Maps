@@ -37,8 +37,12 @@ class Map extends React.Component{
   }
 
   render(){
+    const style = {
+      width: '50vw',
+      height: '50vh'
+    };
     return (
-      <div ref="map">map will come here</div>
+      <div style = {style}ref="map">map will come here</div>
     );
   }
 }
